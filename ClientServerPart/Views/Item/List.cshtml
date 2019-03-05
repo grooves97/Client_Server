@@ -1,0 +1,25 @@
+﻿@model IEnumerable<CleverItem>
+
+<table class="table table-bordered table-dark">
+    <thead>
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">ItemType</th>
+            <th scope="col">ItemName</th>
+            <th scope="col">CurrentStatus</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var CI in Model)
+        {
+            <tr>
+                <td scope="row">@CI.Id</td>
+                <td>@CI.ItemType</td>
+                <td>@CI.ItemName</td>
+                <td>@CI.CurrentStatus</td>
+                <td><input id="chkToggle" type="checkbox" data-toggle="toggle"></td>
+            </tr>
+        }
+    </tbody>
+</table>
+
